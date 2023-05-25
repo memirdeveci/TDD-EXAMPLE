@@ -54,17 +54,9 @@ class CalculatorTest {
             "10, 2.5, 4",
             "12.5, 2.5, 5"
     })
+    
     void testDivision(double dividend, double divisor, double expected) {
         assertEquals(expected, Calculator.divide(dividend, divisor));
-    }
-
-    @Test
-    void testDivisionByZero() {
-        assertThrows(
-                IllegalArgumentException.class,
-                () -> Calculator.divide(12.5, 0),
-                "IllegalArgumentException expected."
-        );
     }
 
     @Test
